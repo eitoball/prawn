@@ -31,7 +31,7 @@ module Prawn
       original_position = self.y
 
       # FIXME: Any way to move this upstream?
-      left_boundary = case(options[:position] || :left)
+      left_boundary = case(options.fetch(:position, :left))
                       when :left
                         margin_box.absolute_left
                       when :center
