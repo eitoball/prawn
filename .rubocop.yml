@@ -223,7 +223,5 @@ Lint/UselessAccessModifier:
   Enabled: false
 Lint/LiteralInCondition:
   Enabled: false
-Performance/TimesMap:
-  Enabled: false
 Lint/LiteralInCondition:
   Enabled: false
