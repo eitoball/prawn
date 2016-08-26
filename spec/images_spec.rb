@@ -50,6 +50,13 @@ describe "the image() function" do
     expect(info.height).to eq(453)
   end
 
+  it "should close file objects that we create" do
+    number_of_open_io_objects = proc do
+      ObjectSpace.each_object(IO).count { |f| !f.closed? }
+    end
+    expect { @pdf.image(@filename) }.not_to change(&number_of_open_io_objects)
+  end
+
   context "setting the length of the bytestream" do
     it "should correctly work with images from Pathname objects" do
       info = @pdf.image(Pathname.new(@filename))
