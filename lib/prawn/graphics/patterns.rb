@@ -121,7 +121,7 @@ module Prawn
             color = stop
           end
 
-          fail ArgumentError, "position must be between 0 and 1" unless (0..1).include?(position)
+          fail ArgumentError, "position must be between 0 and 1" unless (0..1).cover?(position)
           GradientStop.new(position, normalize_color(color))
         end
 
