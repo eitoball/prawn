@@ -150,7 +150,7 @@ module Prawn
         }
 
         # Symbolic AFM fonts (Symbol, ZapfDingbats) have their own encodings
-        font_dict.merge!(:Encoding => :WinAnsiEncoding) unless symbolic?
+        font_dict[:Encoding] = :WinAnsiEncoding unless symbolic?
 
         @document.ref!(font_dict)
       end

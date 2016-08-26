@@ -117,7 +117,7 @@ module Prawn
       # add a reference to the image object to the current page
       # resource list and give it a label
       label = "I#{next_image_id}"
-      state.page.xobjects.merge!(label => pdf_obj)
+      state.page.xobjects[label] = pdf_obj
 
       cm_params = PDF::Core.real_params([ w, 0, 0, h, x, y - h])
       renderer.add_content("\nq\n#{cm_params} cm\n/#{label} Do\nQ")

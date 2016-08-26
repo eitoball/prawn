@@ -213,8 +213,6 @@ Style/IdenticalConditionalBranches:
   Enabled: false
 Performance/RedundantBlockCall:
   Enabled: false
-Performance/RedundantMerge:
-  Enabled: false
 Style/RedundantParentheses:
   Enabled: false
 Performance/RangeInclude:

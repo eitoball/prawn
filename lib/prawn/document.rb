@@ -257,7 +257,7 @@ module Prawn
         # erase the color space so that it gets reset on new page for fussy pdf-readers
         new_graphic_state.color_space = {} if new_graphic_state
 
-        page_options.merge!(:graphic_state => new_graphic_state)
+        page_options[:graphic_state] = new_graphic_state
       end
 
       state.page = PDF::Core::Page.new(self, page_options)

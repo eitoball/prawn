@@ -56,7 +56,7 @@ module Prawn
           :BM   => blend_mode
         )
 
-        page.ext_gstates.merge!(dictionary_name => dictionary)
+        page.ext_gstates[dictionary_name] = dictionary
         dictionary_name
       end
     end
