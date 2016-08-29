@@ -187,8 +187,6 @@ module Prawn
         set_stroke_color
       end
 
-      private
-
       def current_color_space(type)
         graphic_state.color_space[type]
       end

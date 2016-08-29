@@ -219,8 +219,6 @@ Style/RedundantParentheses:
   Enabled: false
 Performance/RangeInclude:
   Enabled: false
-Lint/UselessAccessModifier:
-  Enabled: false
 Lint/LiteralInCondition:
   Enabled: false
 Performance/TimesMap:

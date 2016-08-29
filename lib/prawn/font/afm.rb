@@ -244,8 +244,6 @@ module Prawn
         }
       end
 
-      private
-
       def unscaled_width_of(string)
         string.bytes.inject(0) do |s, r|
           s + @glyph_table[r]
